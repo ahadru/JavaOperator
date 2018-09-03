@@ -1,14 +1,12 @@
 package testing;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import org.junit.jupiter.api.Test;
 
 import main.ArithmeticOperators;
+import main.LogicalOperator;
 
 class OperatorTest {
-	
-	
 	
 	@Test
 	void arithmeticOperatorTest() {
@@ -24,6 +22,12 @@ class OperatorTest {
 	
 	@Test
 	void logicalOperatorTest() {
+		LogicalOperator lo = new LogicalOperator();
+		
+		assertEquals(true,lo.or(true, false));
+		assertEquals(false,lo.and(true, false));
+		assertEquals(false,lo.not(true));
+		assertEquals(true,lo.xor(true, false));
 		
 	}
 	
