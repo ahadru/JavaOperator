@@ -1,9 +1,11 @@
 package testing;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import org.junit.jupiter.api.Test;
 
 import main.ArithmeticOperators;
+import main.BitwiseOperator;
 import main.LogicalOperator;
 
 class OperatorTest {
@@ -33,6 +35,14 @@ class OperatorTest {
 	
 	@Test
 	void bitwiseOperatorTest() {
+		BitwiseOperator bo = new BitwiseOperator();
+		
+		assertEquals(3,bo.or(1, 3));
+		assertEquals(1,bo.and(1, 3));
+		assertEquals(-4,bo.not(3));
+		assertEquals(2,bo.xor(1, 3));
+		assertEquals(10,bo.leftShift(5, 1));
+		assertEquals(2,bo.rightShift(5, 1));
 		
 	}
 
